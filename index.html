@@ -28,6 +28,18 @@
     <button onclick="hideForm()">Cancel</button>
   </div>
 
+
+
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/provision-shop/sw.js');
+    });
+  }
+</script>
+
   <script>
     // 🔑 REPLACE THIS WITH YOUR APPS SCRIPT URL FROM STEP 2
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxtiwTojYoLP4Su5e716xneQGUhXQ1Aimq09iw2VLR-hp6DtDutD0S8vw9FRtUJBbk9ow/exec";
@@ -118,5 +130,6 @@
       document.getElementById("display").innerHTML = html || "<p>No items.</p>";
     }
   </script>
+  
 </body>
 </html>
